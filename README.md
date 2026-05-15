@@ -163,4 +163,16 @@ Período académico: 2024-2025
 
 ## 📄 Licencia
 
-Proyecto académico — Universidad Técnica de Ambato. Uso educativo.
+- Capturas
+<img width="407" height="497" alt="Captura de pantalla 2026-05-15 080413" src="https://github.com/user-attachments/assets/2acf51d3-29ff-406f-995a-cd45607f44d0" />
+<img width="472" height="590" alt="Captura de pantalla 2026-05-15 080443" src="https://github.com/user-attachments/assets/64ef61cc-100e-40a4-a27b-34d3c3d2b38c" />
+<img width="347" height="846" alt="Captura de pantalla 2026-05-15 080511" src="https://github.com/user-attachments/assets/f3c13d8a-7a6e-4e2f-9bf1-eb2fb549ac56" />
+<img width="500" height="853" alt="Captura de pantalla 2026-05-15 080531" src="https://github.com/user-attachments/assets/f99416fe-8164-47a4-92fd-3382285a5fd2" />
+<img width="492" height="817" alt="Captura de pantalla 2026-05-15 080552" src="https://github.com/user-attachments/assets/dceab5c1-0d6c-46cd-8fe7-076be950cb96" />
+<img width="487" height="812" alt="Captura de pantalla 2026-05-15 080608" src="https://github.com/user-attachments/assets/088185ac-0bc3-44ff-b9e8-a3bc6212ed0f" />
+<img width="501" height="681" alt="Captura de pantalla 2026-05-15 080630" src="https://github.com/user-attachments/assets/0e0126f2-78d8-4f55-af19-40d09b99f98a" />
+<img width="497" height="768" alt="Captura de pantalla 2026-05-15 080646" src="https://github.com/user-attachments/assets/c32857e0-6e30-48b2-b7e5-463952974bd0" />
+<img width="510" height="847" alt="Captura de pantalla 2026-05-15 080705" src="https://github.com/user-attachments/assets/7b50b160-874c-42af-86e2-f3ec98b829ac" />
+<img width="292" height="533" alt="Captura de pantalla 2026-05-15 080719" src="https://github.com/user-attachments/assets/42dc14dc-f4d7-4cfa-9211-3bf78280b4ad" />
+
+
