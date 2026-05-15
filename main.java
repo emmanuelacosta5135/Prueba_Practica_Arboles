@@ -1,112 +1,96 @@
 // ============================================================
-// Archivo: Main.java
+//  CLASE PRINCIPAL
+//  Controla el menú y la interacción del usuario
 // ============================================================
 
 import java.util.Scanner;
 
-public class Main {
+public class ArbolEstudiantes {
 
+    // Scanner global para leer datos
     static Scanner sc = new Scanner(System.in);
 
     public static void main(String[] args) {
 
+        // Crear árbol
         ArbolBST arbol = new ArbolBST();
 
-        // DATOS DE PRUEBA
-
-        arbol.insertarEstudiante(
-                new Estudiante(
-                        "1801",
-                        "Alvarez",
-                        "Carlos",
-                        18,
-                        "Sistemas",
-                        3
-                )
-        );
-
-        arbol.insertarEstudiante(
-                new Estudiante(
-                        "1802",
-                        "Lopez",
-                        "Ana",
-                        15,
-                        "Civil",
-                        2
-                )
-        );
-
+        // Variable del menú
         int opcion;
 
         do {
 
+            // Mostrar menú
             mostrarMenu();
 
+            // Leer opción
             opcion = leerEntero();
 
             switch (opcion) {
 
-                case 1 -> insertar(arbol);
+                // Insertar estudiante
+                case 1 -> {
 
+                    arbol.insertarEstudiante(
+                        leerEstudiante()
+                    );
+                }
+
+                // Buscar estudiante
                 case 2 -> {
+
                     System.out.print("Cedula: ");
+
                     arbol.buscarEstudiante(
-                            sc.nextLine()
+                        sc.nextLine()
                     );
                 }
 
+                // Recorrido inorden
                 case 3 -> {
-                    System.out.print("Cedula: ");
-                    arbol.eliminarEstudiante(
-                            sc.nextLine()
-                    );
+
+                    arbol.recorridoInorden();
                 }
 
-                case 4 -> arbol.recorridoInorden();
+                // Salir
+                case 4 -> {
 
-                case 5 -> arbol.recorridoPreorden();
+                    System.out.println("Hasta luego");
+                }
 
-                case 6 -> arbol.recorridoPostorden();
+                // Opción inválida
+                default -> {
 
-                case 7 -> arbol.recorridoPorNiveles();
-
-                case 8 -> arbol.contarNodos();
-
-                case 9 -> arbol.calcularAltura();
-
-                case 10 ->
-                        System.out.println("Fin.");
-
-                default ->
-                        System.out.println("Opcion invalida.");
+                    System.out.println("Opcion invalida");
+                }
             }
 
-        } while (opcion != 10);
+        } while (opcion != 4);
     }
 
-    // ========================================================
+
+    // ====================================================
+    // MOSTRAR MENÚ
+    // ====================================================
 
     static void mostrarMenu() {
 
-        System.out.println("\n========= MENU =========");
+        System.out.println("\n===== MENU =====");
 
         System.out.println("1. Insertar");
         System.out.println("2. Buscar");
-        System.out.println("3. Eliminar");
-        System.out.println("4. Inorden");
-        System.out.println("5. Preorden");
-        System.out.println("6. Postorden");
-        System.out.println("7. BFS");
-        System.out.println("8. Contar nodos");
-        System.out.println("9. Altura");
-        System.out.println("10. Salir");
+        System.out.println("3. Inorden");
+        System.out.println("4. Salir");
 
         System.out.print("Opcion: ");
     }
 
-    // ========================================================
 
-    static void insertar(ArbolBST arbol) {
+    // ====================================================
+    // LEER ESTUDIANTE
+    // ====================================================
+
+    static Estudiante leerEstudiante() {
 
         System.out.print("Cedula: ");
         String cedula = sc.nextLine();
@@ -119,7 +103,7 @@ public class Main {
 
         System.out.print("Nota: ");
         double nota = Double.parseDouble(
-                sc.nextLine()
+            sc.nextLine()
         );
 
         System.out.print("Carrera: ");
@@ -128,33 +112,37 @@ public class Main {
         System.out.print("Nivel: ");
         int nivel = leerEntero();
 
-        arbol.insertarEstudiante(
-                new Estudiante(
-                        cedula,
-                        apellidos,
-                        nombres,
-                        nota,
-                        carrera,
-                        nivel
-                )
+        // Retorna nuevo estudiante
+        return new Estudiante(
+            cedula,
+            apellidos,
+            nombres,
+            nota,
+            carrera,
+            nivel
         );
     }
 
-    // ========================================================
 
+    // ====================================================
+    // LEER ENTERO
+    // ====================================================
+
+    // Controla errores numéricos
     static int leerEntero() {
 
         while (true) {
 
             try {
+
                 return Integer.parseInt(
-                        sc.nextLine()
+                    sc.nextLine()
                 );
 
-            } catch (Exception e) {
+            } catch (NumberFormatException e) {
 
                 System.out.print(
-                        "Ingrese numero valido: "
+                    "Numero invalido: "
                 );
             }
         }
